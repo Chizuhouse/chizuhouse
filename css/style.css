@@ -1,0 +1,663 @@
+
+:root {
+    --dark: #452414;
+    --orange: #e9a900;
+    --cream: #fff9e9;
+    --white: #ffffff;
+    --muted: #806b58;
+    --border: #f0dfb7;
+    --gold: #ffc928;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--cream);
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.announcement {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.header {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #a66b00;
+}
+
+.logo-brand { display: inline-flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 19px; font-weight: 800; letter-spacing: -.5px; color: var(--dark); }
+.logo-brand img { width: 58px; height: 58px; object-fit: cover; border-radius: 50%; border: 2px solid var(--gold); background: #fff; }
+.footer-brand { color: #fff; }
+.footer-brand img { width: 54px; height: 54px; }
+
+.nav {
+    display: flex;
+    gap: 35px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    color: #a66b00;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.login-btn, .cart-btn, .menu-btn {
+    border: none;
+    background: transparent;
+    font-weight: 600;
+}
+
+.cart-btn {
+    background: var(--dark);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+}
+
+#cart-count {
+    background: var(--orange);
+    border-radius: 50%;
+    padding: 3px 7px;
+    margin-left: 5px;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 23px;
+}
+
+.hero {
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1, .about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.13;
+    margin: 20px 0;
+}
+
+.hero h1 em, .about h2 em {
+    color: #a66b00;
+}
+
+.hero-content > p {
+    color: var(--muted);
+    line-height: 1.9;
+    max-width: 420px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--dark);
+    padding: 16px 28px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.primary-btn:hover {
+    background: var(--dark);
+    transform: translateY(-3px);
+}
+
+.hero-info {
+    display: flex;
+    gap: 45px;
+    margin-top: 45px;
+}
+
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hero-info strong {
+    font-size: 18px;
+}
+
+.hero-info small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 180px 180px 10px 10px;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 25px;
+    left: -30px;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 10px 35px #00000012;
+}
+
+.image-label > span {
+    color: var(--orange);
+    font-size: 30px;
+}
+
+.image-label div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.image-label small {
+    color: var(--muted);
+}
+
+.section {
+    padding: 75px 8%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+.section-heading > p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+#search-input {
+    padding: 13px 18px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: white;
+    outline: none;
+    width: 220px;
+}
+
+#search-input:focus {
+    border-color: #a66b00;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.category-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: .3s;
+}
+
+.category-card span {
+    font-size: 22px;
+}
+
+.category-card strong {
+    font-size: 13px;
+}
+
+.category-card:hover, .category-card.active {
+    background: var(--dark);
+    color: white;
+    border-color: var(--dark);
+    transform: translateY(-3px);
+}
+
+.products {
+    background: #fff2ce;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px #00000012;
+}
+
+.product-card img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-category {
+    color: #a66b00;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-info h3 {
+    margin: 9px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+.product-info p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+    min-height: 40px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.product-price {
+    font-weight: 800;
+    color: #a66b00;
+}
+
+.add-btn {
+    background: var(--dark);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.add-btn:hover {
+    background: var(--gold);
+}
+
+.about {
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.about h2 {
+    font-size: 48px;
+}
+
+.about p {
+    max-width: 550px;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.footer {
+    background: var(--dark);
+    color: white;
+    padding: 40px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer p, .footer > a:last-child {
+    font-size: 12px;
+    color: #c2c0b7;
+}
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: #0008;
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.cart-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-panel {
+    position: fixed;
+    z-index: 41;
+    right: -450px;
+    top: 0;
+    width: min(420px, 100%);
+    height: 100%;
+    background: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: .35s;
+}
+
+.cart-panel.show {
+    right: 0;
+}
+
+.cart-heading, .total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-heading {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-heading button {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+}
+
+#cart-items {
+    overflow-y: auto;
+    flex: 1;
+    padding-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-item img {
+    width: 65px;
+    height: 65px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h4 {
+    font-size: 13px;
+}
+
+.cart-item-info p {
+    font-size: 12px;
+    color: var(--orange);
+    margin-top: 7px;
+}
+
+.cart-item button {
+    border: none;
+    background: transparent;
+    color: #c55;
+}
+
+.cart-bottom {
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.total-row {
+    margin-bottom: 20px;
+}
+
+.checkout-btn {
+    width: 100%;
+}
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    opacity: 0;
+    background: var(--dark);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    z-index: 100;
+    transition: .3s;
+    font-size: 13px;
+}
+
+.toast.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+/* Chizu House finishing touches */
+.hero-image img { border: 8px solid #fff; box-shadow: 0 20px 55px #6d431b20; }
+.product-card { border: 1px solid #f2e5c8; box-shadow: 0 8px 24px #6d431b0a; }
+.product-card img { object-position: center; }
+.category-card { border-radius: 14px; }
+.add-btn { background: var(--dark); border-radius: 22px; }
+.add-btn:hover { background: var(--orange); color: var(--dark); }
+.cart-btn { background: var(--dark); }
+.cart-btn:hover { background: #6b3b20; }
+.announcement { background: #452414; color: #ffe39a; }
+
+/* Cart quantity and empty state */
+.quantity-control { display: inline-flex; align-items: center; gap: 11px; margin-top: 9px; padding: 4px 7px; border: 1px solid var(--border); border-radius: 20px; }
+.quantity-control button { width: 23px; height: 23px; border: 0; border-radius: 50%; background: #fff0c2; color: var(--dark); font-weight: 800; }
+.quantity-control span { min-width: 12px; text-align: center; font-size: 12px; font-weight: 700; }
+.remove-item { align-self: center; border: 0; background: transparent; color: #a64a35; font-size: 11px; }
+.empty-cart { padding: 45px 10px; text-align: center; color: var(--muted); }
+.empty-cart span { display: block; font-size: 38px; margin-bottom: 12px; }
+.empty-cart p { color: var(--dark); font-weight: 700; margin-bottom: 6px; }
+.empty-cart small { font-size: 12px; }
+
+
+/* Styling Tambahan untuk Halaman Login & Register */
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f6f0;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.login-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-header h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-top: 10px;
+}
+
+.login-logo {
+    width: 70px;
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box; /* Mencegah input keluar border */
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #d97706; /* Warna khas keju/oren */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background-color: #b45309;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* --- PERBAIKAN UTAMA PANEL KERANJANG CHIZU HOUSE --- */
+aside.cart-panel {
+    position: fixed !important;
+    top: 0 !important;
+    right: -400px !important; /* Tersembunyi di luar layar secara default */
+    width: 380px !important;
+    max-width: 90% !important;
+    height: 100vh !important;
+    background: #ffffff !important;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15) !important;
+    z-index: 99999 !important;
+    transition: right 0.3s ease-in-out !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Saat class active atau show ditambahkan oleh cart.js, panel bergeser ke layar */
+aside.cart-panel.active, 
+aside.cart-panel.show {
+    right: 0 !important;
+}
+
+/* Styling Overlay Belakang Keranjang */
+.cart-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 99998 !important;
+    display: none;
+}

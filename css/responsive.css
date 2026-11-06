@@ -1,0 +1,137 @@
+
+@media (max-width: 900px) {
+    .header {
+        padding: 0 5%;
+    }
+
+    .hero {
+        padding: 60px 5%;
+        gap: 30px;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        height: 70px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .logo-brand { font-size: 15px; gap: 7px; }
+    .logo-brand img { width: 44px; height: 44px; }
+    .footer-brand img { width: 50px; height: 50px; }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        padding: 25px;
+        flex-direction: column;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .header-actions {
+        gap: 12px;
+    }
+
+    .login-btn {
+        font-size: 12px;
+    }
+
+    .cart-btn {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-image img {
+        height: 330px;
+        border-radius: 120px 120px 10px 10px;
+    }
+
+    .image-label {
+        left: 10px;
+        bottom: 15px;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    #search-input {
+        width: 100%;
+    }
+
+    .category-list {
+        gap: 10px;
+    }
+
+    .category-card {
+        padding: 13px;
+    }
+
+    .category-card strong {
+        font-size: 11px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .product-card img {
+        height: 230px;
+    }
+
+    .about h2 {
+        font-size: 38px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

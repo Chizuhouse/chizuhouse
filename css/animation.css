@@ -1,0 +1,40 @@
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: revealUp .9s ease forwards;
+}
+
+.hero-image {
+    animation: floatIn 1s ease both;
+}
+
+.category-card, .product-card, .primary-btn {
+    transition: transform .3s ease, background .3s ease;
+}
+
+@keyframes revealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
